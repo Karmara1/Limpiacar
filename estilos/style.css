@@ -1,0 +1,595 @@
+@charset "utf-8";
+/* fonts que van a ser usados dentro de la pagian web */
+@font-face {
+	font-family: "FjallaOne";
+	src: url(../fonts/FjallaOne-Regular.ttf);
+	}
+@font-face {
+	font-family: "Oswald-bold";
+	src:url(../fonts/Oswald-Bold.ttf);
+	}
+@font-face {
+	font-family: "Oswald-ExtralLight";
+	src:url(../fonts/Oswald-ExtraLight.ttf);
+	}
+@font-face {
+	font-family: "Oswald-Light";
+	src:url(../fonts/Oswald-Light.ttf);
+	}
+@font-face {
+	font-family: "Oswald-Medium";
+	src:url(../fonts/Oswald-Medium.ttf);
+	}
+@font-face {
+	font-family: "Oswald-Regular";
+	src:url(../fonts/Oswald-Regular.ttf);
+	}
+@font-face {
+	font-family: "Oswald-SemiBold";
+	src:url(../fonts/Oswald-SemiBold.ttf);
+	}
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+/*responsive*/
+@media screen and (max-width: 600px){
+    header nav a{
+        text-align: center;
+        font-size: 15px;
+    }
+    
+    footer p{
+      font-size: 20px
+    }
+    
+    footer{ 
+      height: 320px;   
+    }
+}
+
+@media screen and (max-width: 490px){
+    header nav a{
+        text-align: center;
+        font-size: 15px;
+        padding: 10px 15px;
+        margin: 5px;
+    }
+    
+    footer p{
+      font-size: 15px
+    }
+    
+    footer{ 
+      width:100%; 
+      height: 270px;
+      background-color: aqua;   
+    }
+}
+
+@media screen and (max-width: 375px){
+    header nav a{ 
+        text-align: center;
+        font-size: 13px;
+        padding: 5px 10px;
+        margin: 5px;
+    }
+    
+    footer p{
+      font-size: 23px
+    }
+    
+    Con_faros div{
+        width: 175px;
+        height: 220px;
+    }
+    
+    footer{ 
+      width:100%; 
+      height: 330px;
+      background-color: aqua;   
+    }
+    
+}
+
+a{
+    color: inherit;
+    font-family: FjallaOne, sans-serif;
+    font-size: 15px;
+}
+
+body{
+    background-color: #ffffff;
+}
+
+/*Declarando el font y los caracteres principales de los parrafos*/
+p{
+    font-family: Oswald-Regular, sans-serif;
+    color: #20534c;
+    font-size: 25px;
+}
+
+/*Declarando el font y los caracteres principales de los titulos h1*/
+h1{
+    font-family: FjallaOne, sans-serif;
+    font-size: 50px;
+    text-align: center;
+    color: #2c84c8;
+}
+
+/*Declarando una clase con un color y un font especifico*/
+.verde{
+    font-family: FjallaOne, sans-serif;
+    color: #41a99b;
+}
+
+/*Declarando que el header deberá ocuopar el 100% de la pantalla de ancho*/
+header {
+    width: 100%;
+    overflow: hidden;
+    background-color: #ffff;
+    margin-bottom: 10px;
+}
+
+/*Declarando que el contenido principal de la página se ubicará en un ancho del 90% de toda la pagina*/
+.wrapper{
+    width: 90%;
+    max-width: 1050px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.logo{
+    width: 100%;
+}
+
+header .nav{
+    float: right;
+    line-height: 200px;
+}
+
+/*Declarando los carcteres de los botones(a) que tendra el header*/
+header nav a{
+    display: inline-block;
+    color: #41a99b;
+    padding: 15px 20px;
+    margin: 5px;
+    line-height: normal;
+    font-family: FjallaOne, sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    background-color: #cae3e1;
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+/*Declarando el hover de dichos botones(a)*/
+header nav a:hover{
+    background: #b9eae6;
+    border-radius: 40px;
+}
+
+/*Creando un nuevo header que se mantenga sticky on top para cuando se mueve el slider*/
+.header2{
+    position: fixed;
+    height: 100px;
+    background-color: #ffff;
+    opacity: 0.9;
+    height: auto;
+    padding-bottom: 15px;
+}
+
+.header2 nav{
+    line-height: 100px;
+    line-height: 50px;
+}
+
+.header2 img{
+    height: auto;
+    width: 1px;
+    opacity: 0;
+}
+
+/*Declarando e responsive para que las imagenes se puedan escalar en responsive*/
+img{
+    width: 100%;
+    height: auto;
+}
+
+nav{
+    text-align: center;
+}
+
+
+#inicio h1{
+    text-align: center;
+    color: #3c84b5;
+    font-size: 40px;
+}
+
+/*Crendo el parent para el proceso, será util para el responsive*/
+#proceso{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+/*Adaptando los hijos del padre a las condiciones necesarias para el responsive y jerarquia de elementos*/
+#proceso h4{
+    color: #20534c;
+    font-family: Oswald-Regular, sans-serif;
+    font-size: 25px;
+    text-align: center;
+    padding: 5px;
+}
+
+#inicio div{
+    margin: 3px;
+    width: 250px;
+    align-self: stretch;
+    background-color: #b9eae6;
+    opacity: 85%;
+    padding: 10px;
+}
+
+.center p{
+    color: #20534c;
+    text-align: center;
+    font-family: Oswald-Regular, sans-serif;
+    padding: 7px;
+    font-size: 35px;
+}
+
+.apartar{
+    background-color: #b9eae6;
+    opacity: 85%;
+    text-align: center;
+    padding: 15px;
+    margin: 55px;
+    height: 170px;
+    
+}
+
+.apartar, h3{
+    text-align: center;
+    font-family: Oswald-Regular, sans-serif;
+    color: #3c84b5;
+    font-size: 30px;
+}
+
+.apartar, h2{
+    text-align: center;
+    font-family: Oswald-Regular, sans-serif;
+    font-size: 25px;
+}
+
+.apartarButton{
+    background-color: #3c84b5;
+    border-radius: 12px;
+    color: #ffffff;
+    padding: 15px 20px;
+    margin: 5px;
+    line-height: normal;
+    font-family: FjallaOne, sans-serif;
+    font-size: 25px;
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+    
+}
+
+.apartarButton:hover {
+    background-color: #2c84c8;
+    
+}
+
+#servicio{
+    margin-top: 31px;  
+}
+
+/*JQuery que permite ver dos imagenes separadas por un slider. La intención es usarla como un "antes" y "después" del servicio. Por ahora estamos usando un <iframe> que cumple la misma función*/
+.twentytwenty-container{
+    max-width: 150px;
+    position: fixed;
+    
+}
+
+.twentytwenty-container img{
+    max-width: 100%;
+}
+
+/*Creando el padre*/
+#Con_faros{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    padding: 10px;
+    
+}
+
+/*Especificando a los hijos*/
+#faros{
+    background-color: #b9eae6;
+    opacity: 85%;
+    margin: 25px;
+    padding: 10px;
+    text-align: center;
+}
+
+#Con_faros div{
+    width: 255px;
+    height: 400px;
+    background-color: #3c84b5;
+    align-self: stretch;
+    padding: 7px;
+    margin: 7px;
+}
+
+#faros p{    
+    margin: 25px;
+    font-family: Oswald-Regular, sans-serif;
+    color: #20534c;
+}
+
+#tapiceria{
+    background-color: #b9eae6;
+    opacity: 85%;
+    padding: 10px;
+    margin: 25px;
+    font-family: Oswald-Regular, sans-serif;
+    color: #20534c;
+    text-align: center;
+    
+}
+
+/*Creando el padre*/
+#tapiceria div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    padding: 10px;
+}
+
+/*Especificando a los hijos*/
+#tapiceria div img{
+    width: 210px;
+    height: 310px;
+    background-color: #3c84b5;
+    align-self: stretch;
+    padding: 7px;
+    margin: 7px;
+}
+
+#motor{
+    background-color: #b9eae6;
+    opacity: 85%;
+    margin: 10px;
+    padding: 10px;
+    margin: 25px;
+    font-family: Oswald-Regular, sans-serif;
+    color: #20534c;
+    text-align: center;
+}
+
+#motor div{
+    width: 365px;
+    height: 275px;
+    background-color: #3c84b5;
+    align-self: stretch;
+    padding: 7px;
+    margin: 7px;
+}
+
+#carroceria{
+    background-color: #b9eae6;
+    opacity: 85%;
+    margin: 10px;
+    padding: 10px;
+    margin: 25px;
+    font-family: Oswald-Regular, sans-serif;
+    color: #20534c;
+    text-align: center;
+}
+
+/*Creando el padre*/
+#carroceria div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    padding: 10px;
+}
+
+/*Especificando a los hijos*/
+#carroceria div img{
+    padding: 10px;
+    width: 210px;
+    height: 310px;
+    background-color: #3c84b5;
+    align-self: stretch;
+    padding: 7px;
+    margin: 7px;
+}
+
+#otros{
+    background-color: #b9eae6;
+    opacity: 85%;
+    margin: 10px;
+    padding: 10px;
+    margin: 25px;
+    font-family: Oswald-Regular, sans-serif;
+    color: #20534c;
+    text-align: center;
+}
+
+/*Creando al padre*/
+#otros div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    align-self: stretch;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+}
+
+/*Especificando a los hijos*/
+#otros div img{
+    padding: 10px;
+    width: 215px;
+    height: 235px;
+    background-color: #3c84b5;
+    align-self: stretch;
+    padding: 7px;
+    margin: 7px;
+}
+
+#wrapperOtros{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    padding: 10px;
+}
+
+#cotizar{
+    background-color: #b9eae6;
+    opacity: 85%;
+    margin: 10px;
+    padding: 10px;
+    margin: 25px;
+    font-family: Oswald-Regular, sans-serif;
+    color: #20534c;
+    text-align: center;
+}
+
+.botones{
+    background-color: #ffffff;
+    padding: 16px 35px;
+    border-radius: 12px;
+    color: #3c84b5;
+    font-family: FjallaOne, sans-serif;
+    font-size: 25px;
+    margin: 5px;
+    width: 200px;
+}
+
+.botones:hover {
+    background-color: #feeeef;
+    
+}
+
+#domicilio{
+    background-color: #b9eae6;
+    opacity: 85%;
+    margin: 10px;
+    padding: 10px;
+    margin: 25px;
+    font-family: Oswald-Regular, sans-serif;
+    text-align: center;
+}
+
+#wrapper_form{
+    text-align: left;
+    margin-left: 10px;
+    color: #20534c;
+    font-family: FjallaOne, sans-serif;
+    font-size: 25px;
+}
+
+/*Caracteristicas especificas de los inputs*/
+input{
+    border: none;
+    font-size: 20px;
+    color: #20534c;
+}
+
+.resume img{
+    width: 30px;
+    height: auto;
+}
+
+/*Especificando al padre*/
+.resume{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+/*Especificando a los hijos*/
+.resume div{
+    background-color: #ffff;
+    margin: 10px;
+    padding: 10px;
+    align-self: stretch;
+    border-radius: 20px;
+    width: 320px;
+}
+
+.resume-center{
+    flex-basis: 850px;
+    height: 100px;
+    align-self: stretch;
+    text-align: center;
+}
+
+.resume p{
+    text-align: right;
+}
+
+.resume h4{
+    text-align: center;
+}
+
+/*Un footer resoonsive*/
+footer{ 
+  position:absolute; 
+  background-color: #41a99b;
+  width:100%; 
+  height: 330px;
+  font-family: FjallaOne, sans-serif;
+  margin-top: 15px;
+  text-align: center;    
+}
+
+footer img{
+  width: 37px;    
+}
+
+footer p{
+  color: #fff;    
+}
+
+#logoFooter{
+  width: 315px;    
+}
+
+/*Creando el espacio para que el sticky dialogflow pueda mantenerse en pantalla*/
+#dialogflow{
+  position: fixed;
+     bottom: 0px;
+     right: 0px;
+}
